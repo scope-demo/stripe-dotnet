@@ -32,5 +32,18 @@ namespace StripeTests
                 "tiers[1][unit_amount]=2000&tiers[1][up_to]=inf",
                 FormEncoder.CreateQueryString(options));
         }
+
+        [Fact]
+        public void SerializeDecimalString()
+        {
+            var options = new PlanCreateOptions
+            {
+                AmountPrecise = 0.000000123m,
+            };
+
+            Assert.Equal(
+                "amount_precise=0.000000123",
+                FormEncoder.CreateQueryString(options));
+        }
     }
 }

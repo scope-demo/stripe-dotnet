@@ -18,6 +18,9 @@ namespace Stripe
         [JsonProperty("amount")]
         public long? Amount { get; set; }
 
+        [JsonProperty("amount_precise")]
+        public decimal? AmountPrecise { get; set; }
+
         [JsonProperty("billing_scheme")]
         public string BillingScheme { get; set; }
 

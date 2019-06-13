@@ -23,6 +23,17 @@ namespace StripeTests
         }
 
         [Fact]
+        public void DeserializeDecimalString()
+        {
+            string json = "{\"amount_precise\": \"0.000000123\"}";
+            var plan = JsonConvert.DeserializeObject<Plan>(json);
+            Assert.NotNull(plan);
+            Assert.IsType<Plan>(plan);
+            Assert.NotNull(plan.AmountPrecise);
+            Assert.Equal(0.000000123m, plan.AmountPrecise);
+        }
+
+        [Fact]
         public void DeserializeWithExpansions()
         {
             string[] expansions =
