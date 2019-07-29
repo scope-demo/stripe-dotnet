@@ -112,6 +112,9 @@ namespace Stripe
         [JsonProperty("ideal")]
         public SourceIdealCreateOptions Ideal { get; set; }
 
+        [JsonProperty("klarna")]
+        public SourceKlarnaCreateOptions Klarna { get; set; }
+
         [JsonProperty("sepa_debit")]
         public SourceSepaDebitCreateOptions SepaDebit { get; set; }
 

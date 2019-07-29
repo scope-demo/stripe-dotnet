@@ -96,7 +96,7 @@ namespace Stripe
         public string Status { get; set; }
 
         /// <summary>
-        /// The type of the source. The type is a payment method, one of card, three_d_secure, giropay, sepa_debit, ideal, sofort, or bancontact.
+        /// The type of the source. The type is a payment method, one of card, three_d_secure, giropay, sepa_debit, ideal, klarna, sofort, or bancontact.
         /// </summary>
         [JsonProperty("type")]
         public string Type { get; set; }
@@ -146,6 +146,9 @@ namespace Stripe
 
         [JsonProperty("ideal")]
         public SourceIdeal Ideal { get; set; }
+
+        [JsonProperty("klarna")]
+        public SourceKlarna Klarna { get; set; }
 
         [JsonProperty("multibanco")]
         public SourceMultibanco Multibanco { get; set; }
