@@ -25,6 +25,12 @@ namespace Stripe
         public SourceOwnerOptions Owner { get; set; }
 
         /// <summary>
+        /// Information about the items and shipping associated with the source.
+        /// </summary>
+        [JsonProperty("source_order")]
+        public SourceSourceOrderOptions SourceOrder { get; set; }
+
+        /// <summary>
         /// Properties that can be updated on a Card Source.
         /// </summary>
         [JsonProperty("card")]

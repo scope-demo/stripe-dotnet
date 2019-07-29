@@ -77,6 +77,15 @@ namespace Stripe
         [JsonProperty("receiver")]
         public SourceReceiverOptions Receiver { get; set; }
 
+        /// <summary>
+        /// Information about the items and shipping associated with the source.
+        /// </summary>
+        [JsonProperty("source_order")]
+        public SourceSourceOrderOptions SourceOrder { get; set; }
+
+        /// <summary>
+        /// An arbitrary string to be displayed on your customer’s statement.
+        /// </summary>
         [JsonProperty("statement_descriptor")]
         public string StatementDescriptor { get; set; }
 
