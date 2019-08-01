@@ -6,7 +6,7 @@ apt-get install golang -y
 
 echo Fix Go Paths
 export GOROOT=/usr/local/go
-export GOPATH=~/go
+export GOPATH=/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 echo Install Stripe Mock
