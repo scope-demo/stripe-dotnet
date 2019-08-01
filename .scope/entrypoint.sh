@@ -2,6 +2,7 @@ echo Installing Golang
 apt-get update
 apt-get install software-properties-common -y
 add-apt-repository ppa:longsleep/golang-backports
+apt-get update
 apt-get -y upgrade
 apt-get install golang-1.12 -y
 
