@@ -2,7 +2,7 @@ echo Installing Golang
 add-apt-repository ppa:ubuntu-lxc/stable
 apt-get update
 apt-get -y upgrade
-apt-get install golang
+apt-get install golang -y
 
 echo Install Stripe Mock
 go get -u github.com/stripe/stripe-mock
