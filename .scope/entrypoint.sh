@@ -4,9 +4,9 @@ apt-get -y upgrade
 
 echo Installing Golang
 apt-get install software-properties-common -y
-add-apt-repository ppa:gophers/archive
+add-apt-repository ppa:longsleep/golang-backports
 apt-get update
-apt-get install golang-1.11 -y
+apt-get install golang-1.12 -y
 
 echo Fix Go Paths
 export GOPATH=/go
