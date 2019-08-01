@@ -1,10 +1,10 @@
 echo Installing Golang
 apt-get update
 apt-get install software-properties-common -y
-add-apt-repository ppa:longsleep/golang-backports
+add-apt-repository ppa:hnakamur/golang-1.12
 apt-get update
 apt-get -y upgrade
-apt-get install golang-1.12 -y
+apt-get install golang-go -y
 
 echo Fix Go Paths
 export GOPATH=/go
