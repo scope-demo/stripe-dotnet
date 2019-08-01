@@ -1,8 +1,8 @@
 echo Installing Golang
-add-apt-repository ppa:ubuntu-lxc/stable
+add-apt-repository ppa:longsleep/golang-backports
 apt-get update
 apt-get -y upgrade
-apt-get install golang -y
+apt-get install golang-go -y
 
 echo Fix Go Paths
 export GOPATH=/go
