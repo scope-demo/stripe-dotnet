@@ -1,10 +1,12 @@
-echo Installing Golang
-apt-get update
-apt-get install software-properties-common -y
-add-apt-repository ppa:hnakamur/golang-1.12
+echo Updating
 apt-get update
 apt-get -y upgrade
-apt-get install golang-go -y
+
+echo Installing Golang
+apt-get install software-properties-common -y
+add-apt-repository ppa:gophers/archive
+apt-get update
+apt-get install golang-1.11 -y
 
 echo Fix Go Paths
 export GOPATH=/go
