@@ -4,8 +4,9 @@ apt-get update
 apt-get -y upgrade
 apt-get install golang -y
 
-echo Reload bashrc
-source ~/.bashrc
+echo Fix Go Paths
+export GOPATH=/go
+export PATH=$PATH:$GOPATH/bin
 
 echo Install Stripe Mock
 go get -u github.com/stripe/stripe-mock
