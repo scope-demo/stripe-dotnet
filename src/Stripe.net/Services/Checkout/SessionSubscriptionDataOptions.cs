@@ -5,7 +5,7 @@ namespace Stripe.Checkout
     using Newtonsoft.Json;
     using Stripe.Infrastructure;
 
-    public class SessionSubscriptionDataOptions : INestedOptions
+    public class SessionSubscriptionDataOptions : INestedOptions, IHasMetadata
     {
         /// <summary>
         /// A non-negative decimal between 0 and 100, with at most two decimal places. This
