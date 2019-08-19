@@ -1,5 +1,22 @@
 # Changelog
 
+## 28.2.0 - 2019-08-16
+* [#1750](https://github.com/stripe/stripe-dotnet/pull/1750) Make `ChargePaymentMethodDetailsCard.Moto` nullable
+
+## 28.1.0 - 2019-08-15
+* [#1748](https://github.com/stripe/stripe-dotnet/pull/1748)
+  * Add support for `PIN` on Issuing `Card` to reflect the status of a card's PIN
+  * Add support for `Executive` on Person create, update and list
+
+## 28.0.0 - 2019-08-14
+* [#1747](https://github.com/stripe/stripe-dotnet/pull/1747) Move to API version [`2019-08-14`](https://stripe.com/docs/upgrades#2019-08-14)
+  * Rename `platform_payments` to `transfers` in `Account`
+  * Introduce `executive` as a relationship on `Person`
+* [#1746](https://github.com/stripe/stripe-dotnet/pull/1746) Fix argument names in `SetupIntentService` methods
+
+## 27.25.1 - 2019-08-14
+* [#1745](https://github.com/stripe/stripe-dotnet/pull/1745) Fix duplicate expand values issue
+
 ## 27.25.0 - 2019-08-14
 * [#1742](https://github.com/stripe/stripe-dotnet/pull/1742) Support passing `Metadata` on `BankAccount` creation
 
