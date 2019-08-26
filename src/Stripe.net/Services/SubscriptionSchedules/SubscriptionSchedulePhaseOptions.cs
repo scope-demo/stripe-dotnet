@@ -15,11 +15,35 @@ namespace Stripe
         public decimal? ApplicationFeePercent { get; set; }
 
         /// <summary>
+        /// Define thresholds at which an invoice will be sent, and the subscription advanced to a
+        /// new billing period. Pass an empty string to remove previously-defined thresholds.
+        /// </summary>
+        [JsonProperty("billing_thresholds")]
+        public SubscriptionBillingThresholdsOptions BillingThresholds { get; set; }
+
+        /// <summary>
+        /// Either <c>charge_automatically</c>, or <c>send_invoice</c>. When
+        /// charging automatically, Stripe will attempt to pay the underlying
+        /// subscription at the end of each billing cycle using the default
+        /// source attached to the customer. When sending an invoice, Stripe
+        /// will email your customer an invoice with payment instructions.
+        /// Defaults to <c>charge_automatically</c> on creation.
+        /// </summary>
+        [JsonProperty("collection_method")]
+        public string CollectionMethod { get; set; }
+
+        /// <summary>
         /// The code of the coupon to apply to this subscription. A coupon applied to a
         /// subscription will only affect invoices created for that particular subscription.
         /// </summary>
         [JsonProperty("coupon")]
         public string CouponId { get; set; }
+
+        /// <summary>
+        /// ID of the default payment method for the subscription schedule.
+        /// </summary>
+        [JsonProperty("default_payment_method")]
+        public string DefaultPaymentMethodId { get; set; }
 
         /// <summary>
         /// Ids of the tax rates to apply to this phase on the subscription schedule.
@@ -33,6 +57,12 @@ namespace Stripe
         /// </summary>
         [JsonProperty("end_date")]
         public DateTime? EndDate { get; set; }
+
+        /// <summary>
+        /// Define the default settings applied to invoices created by this subscription schedule.
+        /// </summary>
+        [JsonProperty("invoice_settings")]
+        public SubscriptionScheduleInvoiceSettingsOptions InvoiceSettings { get; set; }
 
         /// <summary>
         /// Integer representing the multiplier applied to the plan interval. For example,
@@ -49,6 +79,12 @@ namespace Stripe
         /// </summary>
         [JsonProperty("plans")]
         public List<SubscriptionSchedulePhaseItemOptions> Plans { get; set; }
+
+        /// <summary>
+        /// The date at which this phase of the subscription schedule starts.
+        /// </summary>
+        [JsonProperty("start_date")]
+        public DateTime? StartDate { get; set; }
 
         /// <summary>
         /// A non-negative decimal (with at most four decimal places) between 0 and 100. This
