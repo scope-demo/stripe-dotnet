@@ -1,5 +1,17 @@
 # Changelog
 
+## 28.10.0 - 2019-09-04
+* [#1775](https://github.com/stripe/stripe-dotnet/pull/1775) Add support for `Authentication` and `Url` on Issuing `Authorization`
+
+## 28.9.0 - 2019-09-03
+* [#1774](https://github.com/stripe/stripe-dotnet/pull/1774) Add decimal properties to `PlanTierOptions`
+
+## 28.8.0 - 2019-08-29
+* [#1770](https://github.com/stripe/stripe-dotnet/pull/1770) Add support for `EndBehavior` on `SubscriptionSchedule`
+
+## 28.7.0 - 2019-08-29
+* [#1771](https://github.com/stripe/stripe-dotnet/pull/1771) Add `StripeConfiguration.EnableTelemetry` flag
+
 ## 28.6.0 - 2019-08-26
 * [#1767](https://github.com/stripe/stripe-dotnet/pull/1767) Add `PendingVerification` on `Account`, `Person` and `Capability`
 
